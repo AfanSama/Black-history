@@ -1,0 +1,27 @@
+/**index.wxss**/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textpush{
+  position:relative;
+}
+.textpush image{
+  position: absolute;
+  top: -120rpx;
+  width: 252rpx;
+  left:50%;
+  margin-left: -126rpx;
+}
+.textpush textarea{
+  background: #fff;
+  border-radius: 10rpx;
+  font-size: 14px;
+  padding: 5%;
+  box-sizing: border-box;
+}
+.textpush button{
+  margin-top: 50rpx;
+}

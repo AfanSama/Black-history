@@ -1,0 +1,11 @@
+<!--pages/godmode/godmode.wxml-->
+<view class="container">
+<view class="box">
+<canvas style="width:320px;height:320px;" canvas-id="Afan"/>
+<view class="classname">
+<button type="default" bindtap="gohome"> 制作 </button>
+<button type="default" class="{{cls}}" bindtap="saveImg"> 保存 </button>
+<button type="primary" open-type="share" bindtap=""> 分享 </button>
+</view>
+</view>
+</view>

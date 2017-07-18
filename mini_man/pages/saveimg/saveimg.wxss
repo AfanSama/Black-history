@@ -1,0 +1,12 @@
+/* pages/saveimg/saveimg.wxss */
+.container{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.container image{
+  width: 100%;
+}
+.container p{
+margin-top:20rpx; 
+}

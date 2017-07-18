@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!--<view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{items.urls.thumb}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view  bindtap="show">
+    <text>checkme</text>
+  </view>
+   <block wx:for="{{items}}" wx:for-item="log" wx:key="*this">
+    <text class="log-item">{{index}}</text>
+  </block>
+  -->
+  <view class="textpush">
+    <image bindtap="popupIcon" animation="{{animationData}}"  src="../../img/icon.png" mode="widthFix"></image>
+    <form bindsubmit="subForm">
+      <textarea bindfocus="bindTextAreaFocus" value="{{txt}}" name="text" placeholder="请输入您要说的话" />
+      <button  form-type="submit" type="primary"> 下一步 </button>
+    </form>
+  </view>
+</view>

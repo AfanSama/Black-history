@@ -1,0 +1,22 @@
+/* pages/godmode/godmode.wxss */
+html,body{
+height: 100%;
+}
+.container{
+  padding-top: 20%;
+}
+canvas{
+  margin: 0 auto;
+}
+.container button{
+  display: inline-block;
+  margin: 0 20rpx;
+}
+.container .hide{
+  display: none;
+}
+
+.classname{
+  margin-top: 50rpx;
+  text-align: center;
+}

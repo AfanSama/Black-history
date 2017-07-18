@@ -1,0 +1,5 @@
+<!--pages/saveimg/saveimg.wxml-->
+<view class="container">
+  <image bindtap="onSave" mode="widthFix" src="{{url}}"></image>
+  <p>点击图片保存至手机相册</p>
+</view>

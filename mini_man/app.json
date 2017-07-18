@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/animation/animation",
+    "pages/godmode/godmode",
+    "pages/saveimg/saveimg"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5bc8ff",
+    "navigationBarTitleText": "举牌小人",
+    "navigationBarTextStyle": "white"
+  }
+}
