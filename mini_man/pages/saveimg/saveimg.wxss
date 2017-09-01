@@ -1,12 +1,43 @@
 /* pages/saveimg/saveimg.wxss */
 .container{
-display:flex;
-justify-content:center;
-align-items:center;
+  background: #2eb7fd;
 }
 .container image{
-  width: 100%;
+  width: 320px;
+  margin: 0 auto;
+  position: absolute;
+  top:50%;
+  transform:translateY(-75%);
 }
 .container p{
 margin-top:20rpx; 
+}
+.classname{
+  position: absolute;
+  bottom: 104rpx;
+  white-space: nowrap;
+  left: 50%;
+  transform:translateX(-50%);
+}
+.classname button{
+  display: inline-block;
+  margin: 0 19rpx;
+  height: 106rpx;
+  width: 170rpx;
+}
+.classname button::after{
+  display: none;
+}
+.classname .newimg{
+  background:url("http://image.fentuapp.com.cn/jupai/reset.png") no-repeat;
+  background-size: cover;
+  width: 218rpx;
+}
+.classname .saveimg{
+  background:url("http://image.fentuapp.com.cn/jupai/sava.png") no-repeat;
+  background-size: cover;
+}
+.classname .share{
+  background:url("http://image.fentuapp.com.cn/jupai/share.png") no-repeat;
+  background-size: cover;
 }

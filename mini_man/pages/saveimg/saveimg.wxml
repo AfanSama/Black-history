@@ -1,5 +1,9 @@
 <!--pages/saveimg/saveimg.wxml-->
 <view class="container">
-  <image bindtap="onSave" mode="widthFix" src="{{url}}"></image>
-  <p>点击图片保存至手机相册</p>
+<image bindtap="onSave" mode="widthFix" src="{{url}}"></image>
+<view class="classname">
+<button class="newimg" type="default" bindtap="gohome"></button>
+<button class="saveimg {{cls}}" type="default" bindtap="saveImg"></button>
+<button class="share" type="primary" open-type="share" bindtap=""></button>
+</view>
 </view>

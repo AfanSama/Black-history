@@ -1,11 +1,19 @@
 <!--pages/godmode/godmode.wxml-->
 <view class="container">
 <view class="box">
-<canvas style="width:320px;height:320px;" canvas-id="Afan"/>
-<view class="classname">
-<button type="default" bindtap="gohome"> 制作 </button>
-<button type="default" class="{{cls}}" bindtap="saveImg"> 保存 </button>
-<button type="primary" open-type="share" bindtap=""> 分享 </button>
+<canvas class="{{tab}}" style="width:320px;height:320px;" canvas-id="Afan"/>
+<image class="{{tabs}}" src="{{tabsUrl}}" mode="aspectFit"></image>
 </view>
+<button bindtap="nextImg" type="default"></button>
+<view class="page-section-spacing">
+  <scroll-view class="scroll-view_H" scroll-x="true"  style="width: 100%">
+        <block wx:for="{{imgUrls}}" wx:key="types">
+          <view class="spacing">
+              <image bindtap="subBtn" data-val="{{index}}" src="{{item}}" class="slide-image" mode="widthFix"/>
+              <image src="http://image.fentuapp.com.cn/jupai/line.png" class="line"/>
+          </view>
+        </block>
+  </scroll-view>
 </view>
+
 </view>

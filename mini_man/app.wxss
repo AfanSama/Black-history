@@ -7,5 +7,6 @@ page{height:100%}
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  background: #5bc8ff;
+  background:url(http://image.fentuapp.com.cn/jupai/bg.png);
+  background-size: cover;
 } 

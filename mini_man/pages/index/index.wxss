@@ -16,12 +16,30 @@
   margin-left: -126rpx;
 }
 .textpush textarea{
+  width: 624rpx;
+  height: 279rpx;
   background: #fff;
   border-radius: 10rpx;
-  font-size: 14px;
+  font-size: 36rpx;
+  color: #383838;
   padding: 5%;
   box-sizing: border-box;
 }
 .textpush button{
-  margin-top: 50rpx;
+  margin-top: 92rpx;
+  width: 624rpx;
+  height: 104rpx;
+  background: url(http://image.fentuapp.com.cn/jupai/next_0.png) no-repeat;
+  background-size: cover;
+}
+
+.textpush button::after{
+  display: none;
+}
+.textpush .bubble{
+  position: absolute;
+  left:50%;
+  width: 219rpx;
+  margin-left: 118rpx;
+  opacity: 0;
 }
