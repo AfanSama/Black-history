@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta content="telephone=no,email=no" name="format-detection"/>  
+<meta charset="utf-8">
+<title>分图红包</title>
+<script src="plugins/jquery-3.2.1.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+	document.write("<link href='css/style.css?"+Math.random()+"' type='text/css' rel='stylesheet'>");
+	document.write("<script src='js/jssdk.min.js?"+Math.random()+"'><"+'/'+"script>");
+</script>
+
+<script>
+$(function(){
+	if(is_weixn()){
+		var Request = new Object();
+		Request = GetRequest();
+		init(Request["rid"],Request["code"]);
+	}else{
+		confiremError("请在微信中打开");
+	}
+});
+</script>
+</head>
+
+<body>
+	<section class="view">
+    	<div class="red-pk">	
+        	<div class="contet hidden">
+            	<a class="off" href="javascript:void(0)" onClick="closeBrower()"><img src="img/cancel@3x.png"></a>
+            	<img src="img/red@3x.png"/>
+                <div class="open-redpk">
+                <a href="javascript:void(0)" onClick="openRed()"><img class="open-red " src="img/open@3x.png"/></a>
+                </div>
+                <p class="title text_overflow"></p>
+                <div class="head">
+                	<img src="img/tx.jpg"/>
+                    <p></p>
+                </div>
+                <p class="sub">来自分图APP</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+

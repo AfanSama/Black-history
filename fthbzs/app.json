@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/pay/pay",
+    "pages/hbjl/hbjl",
+    "pages/redpacket/redpacket",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f15353",
+    "navigationBarTitleText": "分图钱包",
+    "navigationBarTextStyle":"#fff"
+  }
+}

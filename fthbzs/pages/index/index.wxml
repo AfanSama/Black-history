@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="balance">余额：{{userAccount.account}}元</text>
+  </view>
+  <view class="btn">
+    <image bindtap="getMoney" mode="aspectFit" src="/img/txbtn.png"></image>
+    <image bindtap="getRecord" mode="aspectFit" src="/img/jlbtn.png"></image>
+  </view>
+  <view class="jl"><text>最近记录</text></view>
+  <view  wx:for="{{redList.data}}" wx:key="redpk" class="item {{item.is_use==0 ? 'past' : ''}}" bindtap="goRedPacket">
+    <view class="head">
+      <image class="userinfo-avatar" src="{{item.avatar}}" background-size="cover"></image>
+      <text>来自{{item.user_name}}的红包</text>
+      <image class="share" src="/img/share.png" background-size="cover" catchtap="goShare"></image>
+    </view>
+    <text class="title">{{item.intro}}</text>
+    <text class="money"><text class="spacing">¥</text>{{item.amount}}</text>
+    <view class="footer">
+      <image src="/img/hb.png" background-size="cover"></image>
+      <text class="num">红包剩余：{{item.residue}}个</text>
+      <!-- <text class="info">点击查看红包详情</text> -->
+    </view>
+    <image class="pasticon" src="/img/gq.png"></image>
+  </view>
+</view>

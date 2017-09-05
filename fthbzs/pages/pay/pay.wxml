@@ -1,0 +1,28 @@
+<!--pages/pay/pay.wxml-->
+<view class="container">
+<view class="ad_popError" wx:if="{{popErrorMsg}}">{{popErrorMsg}}</view>  
+    <image class="logo" src="/img/wxpay.png"></image>
+    <image class="bg"  src="/img/paybg.png"></image>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="account">
+        <text>手机号码</text>
+        <input name="phone" maxlength="11" type="text" placeholder="请输入手机号码" placeholder-class="text" value="{{phone}}"  bindinput="bindPhoneInput" />
+      </view>
+      <view class="name">
+        <text>真实姓名</text>
+        <input name="userName" type="text" placeholder="请输入真实姓名" placeholder-class="text" value="{{name}}"  bindinput="bindNameInput" />
+      </view>
+      <view class="hint"><text>（真实姓名用来验证账号是否正确）</text></view>
+      <view class="money">
+      <text>￥</text><input name="money" type="digit" maxlength="6" placeholder-class="text" placeholder="请输入要提现的金额" value="{{moeny}}" />
+      <!-- <button bindtap="total">全部提现</button> -->
+      </view>
+      <view class="hint">
+        <text>可提现余额{{userAccount.account}}元</text>
+        <text>转出时收取2%手续费(不足0.1元按0.1元收取)</text>
+      </view>
+      <button class="btn" disabled="{{click}}" formType="submit">
+      <image formType="submit" class="btn" background-size="contain" src="/img/yetx.png"></image>
+      </button>
+    </form>
+</view>

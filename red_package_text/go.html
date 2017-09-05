@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>正在跳转...</title>
+<script src="plugins/jquery-3.2.1.min.js"></script>
+<script>
+function GetRequest() {   
+	var url = location.search; //获取url中"?"符后的字串   
+	var theRequest = new Object();   
+	if (url.indexOf("?") != -1) {   
+	  var str = url.substr(1);   
+	  strs = str.split("&");   
+	  for(var i = 0; i < strs.length; i ++) {   
+		 theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
+	  }   
+	}
+	return theRequest;   
+}
+$(function(){
+	var Request = new Object();
+	Request = GetRequest();
+	var keys=Request["keys"];
+	if(keys){
+		$.getJSON("https://api.fentuapp.com.cn/Redpacket/yiMu",{"key":keys},function (data) {
+			if(data.errcode==0){
+				window.location.href=data.data.url;
+			}
+		});
+	}else{
+		setInterval(
+		$.getJSON("https://api.fentuapp.com.cn/Redpacket/randRedpacket",function (data) {
+			window.location.href=data.redpacket_url;
+		}),1000);
+	}
+});
+</script>
+</head>
+</html>
+

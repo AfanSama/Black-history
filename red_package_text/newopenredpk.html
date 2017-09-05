@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta charset="utf-8">
+
+<title>分图红包</title>
+<link href='plugins/jquery.barrager.js/css/barrager.css' type='text/css' rel='stylesheet'>
+<script src="plugins/jquery-3.2.1.min.js"></script>
+<script src="plugins/jquery.barrager.js/js/jquery.barrager.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+	document.write("<link href='css/style.css?"+Math.random()+"' type='text/css' rel='stylesheet'>");
+	document.write("<script src='js/jssdk.min.js?"+Math.random()+"'><"+'/'+"script>");
+</script>
+
+<script>
+$(function(){
+	if(is_weixn()){
+		loading();
+		getrpk();
+		var Request = new Object();
+		Request = GetRequest();
+		var userinfo=JSON.parse(sessionStorage.getItem("userinfo"));
+		wxShare(window.location.href.split("#")[0],Request["rid"],userinfo);
+		getBarrager(Request["rid"],true);
+		bindBtn(Request["rid"]);
+		wx.ready(function() {
+			document.getElementById('bgmusic').play();
+		});
+	}else{
+		confiremError("请在微信中打开");
+	}
+});
+</script>
+</head>
+
+<body>
+	<section class="orpk-view hidden">
+        <header>
+        	<div class="share-hint">
+        		<img src="img/share.png">
+            </div>
+            <!--<h1 class="title">
+        	<a class="btn" href="javascript:void(0)" onClick="closeBrower()"><img src="img/return@3x.png"></a>
+            分图红包
+            </h1>-->
+            <img src="img/bg_1@3x.png">
+            <div class="head"> 
+                <img src="img/tx.jpg"/>
+                <p>分图的红包</p>
+            </div>
+        </header>
+        <section class="content">
+        	<div class="money">
+        	<p><sapn class="singlemoney"></sapn>元</p>
+            <!--<a href="javascript:void(0)" >已存入分图钱包，立即提现></a>-->
+             <button onClick="mobiledge()">立即提现</button><button onClick="goApp()">我发红包</button>
+            </div>
+        	<img src="img/bg_2@3x.png">
+        </section>
+        <footer>
+        	<div class="slogan-box text_overflow">
+        	<p class="slogan text_overflow">恭喜发财，大吉大利</p>
+            </div>
+        	<div class="banner"><a><img src="img/ad@3x.png"/></
+            a></div>
+            <p class="adlink"><a>查看详情<img src="img/link.png"></a></p>
+            <p class="redpk-num">共10个红包</p>
+            <p class="top-fixed" style="margin:0 -5%;"><img style="width:100%;" src="img/fximg.jpg"></p>
+            <ul class="redpk-list">
+            </ul>
+            <p style="text-align: center; font-size:.75rem; color:#ccc;">我是有底线的</p>
+        </footer>
+        <section class="barrager-btn">
+        	<div class="barrager-btn-send"><img src="img/send.png"><img class="sendicon" src="img/sendicon.png"></div>
+            <div class="on-barrager"><img src="img/on.png"></div>
+            <div class="off-barrager hidden"><img src="img/off.png"></div>
+        </section>
+        <section class="music" onClick="bindMusic()">
+        	<img src="img/musicoff.png">
+        </section>
+    </section>
+    <audio id="bgmusic" src="mp3/1.mp3"></audio>
+</body>
+</html>
+<script>
+var barrel;
+$(window).scroll(function(){
+  clearTimeout(barrel);
+  if($(".share-hint").hasClass("on")){
+  barrel=setTimeout(function(){$(".share-hint").removeClass("on")},1000);
+  }else{
+  $(".share-hint").addClass("on");
+  }
+  var scrollTop = $(this).scrollTop();    //滚动条距离顶部的高
+  var boxtop =$(".redpk-num").offset().top;
+  if(boxtop+50<scrollTop){
+	  $(".top-fixed").css({"position":"fixed","top":0,"z-index":"10","width":"100%"});
+	  var top=$(".top-fixed").height();
+	  $(".redpk-list").css({"padding-top":top+"px"})
+  }else{
+	  $(".top-fixed").css({"position":"relative","top":"inherit","z-index":"10","width":"inherit"});
+  	  $(".redpk-list").css({"padding-top":"0px"})
+  }
+});
+</script>
+

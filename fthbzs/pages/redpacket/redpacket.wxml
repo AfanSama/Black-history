@@ -1,0 +1,13 @@
+<!--pages/redpacket/redpacket.wxml-->
+<view class="container">
+	<view class="view">
+      <view class="red-pk">
+        <view animation="{{animationData}}" class="contet">
+          <image src="/img/red@3x.png"  mode="aspectFit"></image>
+          <view class="open-redpk">
+            <image src="/img/open@3x.png"  mode="aspectFit" ></image>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>

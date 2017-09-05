@@ -1,0 +1,117 @@
+/* pages/pay/pay.wxss */
+.logo{
+  width: 118rpx;
+  height: 138rpx;
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%);
+  top:36rpx;
+}
+.bg{
+  margin: 200rpx 0 0;
+  width: 745rpx;
+  height: 750rpx;
+}
+.btn{
+  width: 659rpx;
+  height:166rpx;
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top:760rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn image{
+  position: absolute;
+  z-index: 10;
+  top:0;
+}
+.btn::after{
+  display: none;
+}
+form{
+  position: absolute;
+  top: 200rpx;
+  width: 750rpx;
+  height: 703rpx;
+}
+form view{
+  width: 630rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin:20rpx auto 0;
+  height: 150rpx;
+  line-height: 150rpx;
+  vertical-align: middle;
+  border-bottom: 1px solid #efefef;
+}
+form view text{
+  font-size: 36rpx;
+  color: #383838;
+  display: inline-block;
+  vertical-align: middle;
+}
+form view input{
+  font-size: 32rpx;
+  color: #9a9a9a;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 52rpx;
+  width: 280rpx;
+}
+.hint{
+  text-align: right;
+  border:0;
+  line-height: 30rpx;
+  height: 60rpx;
+  padding: 0;
+}
+.hint text{
+  font-size: 24rpx;
+  color: #cccccc;
+}
+.money {
+  padding:0 10rpx;
+  position: relative;
+}
+.money text{
+  font-size: 80rpx;
+  font-family: 'Microsoft YaHei','STXihei','MingLiu'
+}
+.money  input{
+  font-size: 30rpx;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.money button{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-size:24rpx;
+  color: #383838;
+  background: #fff;
+}
+.money button::after{
+  display: none;
+}
+.ad_popError{
+   background: #de352d;
+   color: #fff;
+   height: 58rpx;
+   line-height: 58rpx;
+   font-size: 24rpx;
+   text-align: center;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   z-index:3;
+} 
+.text{
+  color: #cacaca;
+}

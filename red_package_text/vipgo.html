@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>正在跳转...</title>
+<script src="plugins/jquery-3.2.1.min.js"></script>
+<script>
+function GetRequest() {   
+	var url = location.search; //获取url中"?"符后的字串   
+	var theRequest = new Object();   
+	if (url.indexOf("?") != -1) {   
+	  var str = url.substr(1);   
+	  strs = str.split("&");   
+	  for(var i = 0; i < strs.length; i ++) {   
+		 theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
+	  }   
+	}
+	return theRequest;   
+}
+$(function(){
+	var Request = new Object();
+	Request = GetRequest();
+	var rid=Request["rid"];
+	var timestamp=new Date().getTime();
+	var redirect_uri=encodeURIComponent("http://redpacket.fentuapp.com.cn/vipredpacket.html?rid="+rid+"&timestamp="+timestamp);
+	url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1b36f9f74f362a67&redirect_uri="+redirect_uri+"&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+	window.location.href=url;
+});
+</script>
+</head>
+</html>
+

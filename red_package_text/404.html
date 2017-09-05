@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta content="telephone=no,email=no" name="format-detection"/>  
+<meta charset="utf-8">
+<title>找不到红包啦</title>
+<script src="plugins/jquery-3.2.1.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+	document.write("<link href='css/style.css?"+Math.random()+"' type='text/css' rel='stylesheet'>");
+	document.write("<script src='js/jssdk.min.js?"+Math.random()+"'><"+'/'+"script>");
+</script>
+
+<script>
+$(function(){
+	if(!is_weixn()){
+		confiremError("请在微信中打开");
+	}
+});
+</script>
+</head>
+
+<body>
+	<section class="view position">
+    	<img src="img/404.png">
+        <div>
+        <p>为了安慰您，我们给您准备了</p>
+        <img onClick="javascript:window.location.href='http://redpacket.fentuapp.com.cn/go.html'" src="img/404btn.png">
+        </div>
+    </section>
+</body>
+</html>
+
+

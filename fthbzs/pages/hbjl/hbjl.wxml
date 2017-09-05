@@ -1,0 +1,42 @@
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">已收红包</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已发红包</view>  
+</view>  
+<swiper current="{{currentTab}}" class="swiper-box" duration="500" style="height:{{winHeight}}px" bindchange="bindChange">  
+    <!-- 已收红包 -->  
+    <swiper-item>    
+        <view wx:for="{{redList.data}}" wx:key="redpk" class="item {{item.is_use==0 ? 'past' : ''}}">
+          <view class="head">
+            <image class="userinfo-avatar" src="{{item.avatar}}" background-size="cover"></image>
+            <text>来自{{item.user_name}}的红包</text>
+            <image class="share" src="/img/share.png" background-size="cover"></image>
+          </view>
+          <text class="title">{{item.intro}}</text>
+          <text class="money"><text class="spacing">¥</text>{{item.amount}}</text>
+          <view class="footer">
+            <image src="/img/hb.png" background-size="cover"></image>
+            <text class="num">红包剩余：{{item.residue}}个</text>
+            <!-- <text class="info">点击查看红包详情</text> -->
+          </view>
+          <image class="pasticon" src="/img/gq.png"></image>
+        </view>
+    </swiper-item>  
+    <!-- 已发红包 -->  
+    <swiper-item>    
+        <view wx:for="{{setRedList.data}}" wx:key="redpk" class="item {{item.is_use==0 ? 'past' : ''}}">
+          <view class="head">
+            <image class="userinfo-avatar" src="{{item.avatar}}" background-size="cover"></image>
+            <text>{{item.user_name}}发出的红包</text>
+            <image class="share" src="/img/share.png" background-size="cover"></image>
+          </view>
+          <text class="title">{{item.intro}}</text>
+          <text class="money"><text class="spacing">¥</text>{{item.amount}}</text>
+          <view class="footer">
+            <image src="/img/hb.png" background-size="cover"></image>
+            <text class="num">红包剩余：{{item.residue}}个</text>
+            <!-- <text class="info">点击查看红包详情</text> -->
+          </view>
+          <image class="pasticon" src="/img/gq.png"></image>
+        </view>
+    </swiper-item>  
+</swiper>  

@@ -1,0 +1,6 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <image src="/img/welcome.png" style="height:{{winHeight}}px;width:{{winWidth}}px"></image>
+  <image src="/img/logo.png" mode="aspectFit" class="logo"></image>
+  <image class="login" src="/img/login.png" bindtap="wxLogin"></image>
+</view>

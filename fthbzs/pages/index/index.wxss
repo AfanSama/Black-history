@@ -1,0 +1,181 @@
+/**index.wxss**/
+page{
+  background-color: #f5f5f5;
+  padding-bottom: 40rpx;
+}
+.container{
+  background:url("http://fentuapp.com.cn/img/banner@bg.png") no-repeat;
+  background-size:contain;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 169rpx;
+  height: 169rpx;
+  margin-top: 60rpx;
+  border-radius: 50%;
+}
+
+.balance{
+  color: #fff;
+  margin-top: 60rpx;
+  font-size: 52rpx;
+}
+
+.btn{
+  margin-top: 75rpx;
+  font-size: 0;
+}
+.btn image{
+  width: 385rpx;
+  height: 155rpx;
+  display: inline-block;
+  margin: 0 -10rpx;
+  border: 0;
+  padding: 0;
+}
+.jl{
+  width: 750rpx;
+  text-align: center;
+  position: relative;
+}
+.jl::before{
+  content: "";
+  display: block;
+  width: 750rpx;
+  height: 1px;
+  background: #ececec;
+  position: absolute;
+  top:55%;
+  z-index: -1;
+}
+.jl text{
+  color: #bebebe;
+  font-size: 32rpx;
+  position: relative;
+  background: #f5f5f5;
+  padding: 0 20rpx;
+}
+.item{
+  height: 329rpx;
+  width: 694rpx;
+  margin: 30rpx auto 0;
+  border-radius: 15rpx;
+  background: #fff;
+  box-shadow: 0 4px 5px #efefef;
+  overflow: hidden;
+  text-align: center;
+  font-size: 0;
+  position: relative;
+}
+.item .head{
+  height: 107rpx;
+  background: #EE6261;
+  line-height: 107rpx;
+  color: #fff;
+  position: relative;
+  font-size: 34rpx;
+}
+.item .head .userinfo-avatar{
+  width: 63rpx;
+  height: 63rpx;
+  margin:0 23rpx;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.item .head .share{
+  width: 50rpx;
+  height: 52rpx;
+  margin:0 23rpx;
+  position: absolute;
+  right: 0;
+  top:50%;
+  transform: translate(0,-50%);
+}
+.item text{
+  display:inline-block;
+}
+.item .title{
+  height: 97rpx;
+  line-height: 97rpx;
+  font-size: 32rpx;
+  color: #333;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 80rpx;
+  box-sizing: border-box;
+}
+.item .title::after{
+  content: "";
+  display: block;
+  width:438rpx;
+  height: 1px;
+  border-bottom: 1px solid transparent;
+  background-clip: padding-box,border-box;
+  background-origin: padding-box,border-box;
+  background-image: linear-gradient(90deg,#fff,#f1f1f1,#fff);
+}
+.item .money{
+  font-size:64rpx;
+  display: block;
+  color: #fa4c71;
+  line-height: 121rpx;
+}
+.item .money .spacing{
+  margin-right: 10rpx;
+}
+.item.past .head{
+  background:#c4c4c4;
+}
+.item.past .head .share {
+  display: none;
+  pointer-events: none; 
+}
+.item.past .pasticon{
+  display: block;
+}
+.footer{
+  position: absolute;
+  bottom:10rpx;
+  vertical-align: middle;
+  height: 30rpx;
+  width: 100%;
+  text-align: left;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+.footer image{
+  width: 23rpx;
+  height: 27rpx;
+  vertical-align: middle;
+}
+.footer .num{
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #4e4e4e;
+  margin-left: 10rpx;
+}
+.footer .info{
+  color: #d8d8d8;
+  font-size: 20rpx;
+  position: absolute;
+  right: 28rpx;
+  top:50%;
+  transform: translate(0,-50%);
+}
+.pasticon{
+  position: absolute;
+  width: 141rpx;
+  height: 141rpx;
+  top:13rpx;
+  right:13rpx;
+  display: none;
+}
