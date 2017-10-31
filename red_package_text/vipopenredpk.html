@@ -8,7 +8,7 @@
 <meta content="telephone=no,email=no" name="format-detection"/>
 <meta charset="utf-8">
 
-<title>分图红包</title>
+<title> </title>
 <link href='plugins/jquery.barrager.js/css/barrager.css' type='text/css' rel='stylesheet'>
 <script src="plugins/jquery-3.2.1.min.js"></script>
 <script src="plugins/jquery.barrager.js/js/jquery.barrager.js"></script>
@@ -27,8 +27,8 @@ $(function(){
 		Request = GetRequest();
 		var userinfo=JSON.parse(sessionStorage.getItem("userinfo"));
 		wxShare(window.location.href.split("#")[0],Request["rid"],userinfo);
-		getBarrager(Request["rid"],true);
-		bindBtn(Request["rid"]);
+		//getBarrager(Request["rid"],true);
+		//bindBtn(Request["rid"]);
 		wx.ready(function() {
 			document.getElementById('bgmusic').play();
 		});
@@ -78,16 +78,23 @@ $(function(){
             </ul>
             <p style="text-align: center; font-size:.75rem; color:#ccc;">我是有底线的</p>
         </footer>
-        <section class="barrager-btn">
+        <!-- 弹幕模块 -->
+        <!-- <section class="barrager-btn">
         	<div class="barrager-btn-send"><img src="img/send.png"><img class="sendicon" src="img/sendicon.png"></div>
             <div class="on-barrager"><img src="img/on.png"></div>
             <div class="off-barrager hidden"><img src="img/off.png"></div>
-        </section>
+        </section> -->
         <section class="music" onClick="bindMusic()">
         	<img src="img/musicoff.png">
         </section>
+        <section class="rqcode" onClick="bindRqcode()">
+          <img src="img/rqcodebtn.png">
+        </section>
+        <section class="phone" onClick="bindPhone()">
+          <img src="img/phonebtn.png">
+        </section>
     </section>
-    <audio id="bgmusic" src="http://image.fentuapp.com.cn/audio/audio_yimu.mp3" autoplay="autoplay"></audio>
+    <audio id="bgmusic" src="http://image.fentuapp.com.cn/voice/voice_3.mp3" autoplay="autoplay"></audio>
 </body>
 </html>
 <script>

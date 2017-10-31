@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="textpush">
+    <image bindtap="popupIcon" animation="{{animationData}}"  src="../../img/icon.png" mode="widthFix"></image>
+    <image animation="{{animationData}}" class="bubble"  src="http://image.fentuapp.com.cn/jupai/tip.png" mode="widthFix"></image>
+    <form bindsubmit="subForm">
+      <textarea bindfocus="bindTextAreaFocus" value="{{txt}}" name="text" placeholder="请输入您要说的话" placeholder-style="color:#7c7c7c" />
+      <button  form-type="submit"></button>
+    </form>
+  </view>
+</view>

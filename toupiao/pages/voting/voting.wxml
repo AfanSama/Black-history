@@ -1,0 +1,44 @@
+<!--pages/voting/voting.wxml-->
+<import src="../templateslist/templateslist.wxml"/>
+<scroll-view style='height:100%' scroll-y lower-threshold="{{windowHeight}}" upper-threshold="{{windowHeight}}" bindscrolltolower='showSearch' bindscrolltoupper="hideSearch">
+<view class='box'>
+  <view class="search {{isShow==0?'':'show'}}">
+    <input type='text' placeholder='输入选手序号或姓名'></input>
+    <text>搜索</text>
+  </view>
+  <view class='cover'>
+  <image src='/img/cover.png' mode="widthFix"></image>
+  </view>
+  <view class='details'>
+    <text class='strTime'>报名截止：2017-09-10 12:00</text>
+    <text class='endTime'>结束时间：2017-10-15 12:00</text>
+  </view>
+  <view class='content'>
+    <text class='title'>“心理罪海报”</text>
+    <text class='subhead'>作品简介</text>
+    <view class='textinfo'>
+      {{text}}
+    </view>
+    <text class='subhead'>活动奖励</text>
+    <text class='award textinfo'>1.累积至1升可参与10元支付宝红包抽奖（中奖率20%）
+    2.累积至5升可参与50元支付宝红包抽奖  （中奖率10%）
+    3.累积至10升可参与500元支付宝红包抽奖（中奖率3%）
+    4.累积至20升可参与1000元支付宝红包抽奖（中奖率2%）
+    5.累积至50升可参与4999元支付宝红包抽奖（中奖率1%）
+    </text>
+    <text class='subhead hot'>热门投票</text>
+    <view class='votinglist'>
+      <block wx:for="{{list}}" wx:key="vote">
+        <template is="votinglist" data="{{...item,index}}"></template>
+      </block>
+    </view>
+    <view class='more'>更多选手...</view>
+    <view class='agreement'>用户协议</view>
+  </view>
+
+  <view class='menu'>
+    <text>报名参加</text>
+    <text>分享该活动</text>
+  </view>
+</view>
+</scroll-view>

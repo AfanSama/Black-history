@@ -1,0 +1,109 @@
+/* pages/home/home.wxss */
+.box{
+  padding-top: 25rpx;
+  background: #f7f7f7;
+}
+swiper{
+  height: 430rpx;
+}
+.banner{
+  font-size: 0;
+  margin:0 28rpx;
+  box-sizing: border-box;
+  position:relative;
+  height: 363rpx;
+  overflow: hidden;
+}
+image{
+  width: 100%;
+  height: 363rpx;
+}
+.banner view{
+  position: absolute;
+  bottom: 0;
+  color: #f7f7f7;
+  background: rgba(000,000,000,.3);
+  font-size: 30rpx;
+  left: 0;
+  width: 100%;
+  height: 68rpx;
+  line-height: 68rpx;
+  padding-left: 24rpx;
+  box-sizing: border-box;
+}
+.bannertab{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.bannertab view{
+  width: 10rpx;
+  height: 10rpx;
+  display:inline-block;
+  background: #e3e3e3;
+  border-radius: 50%;
+  border: 6rpx solid #e3e3e3;
+  margin: 0 15rpx;
+}
+.bannertab view.on{
+  background: #fff;
+}
+.tab{
+  white-space: nowrap;
+  padding: 30rpx 30rpx;
+  box-sizing: border-box;
+}
+.tab view{
+  display: inline-block;
+  width: 20%;
+  height:67rpx;
+  line-height: 67rpx;
+  font-size: 36rpx;
+  text-align: center;
+  border-radius: 5px;
+}
+.bill .listbox{
+  width: 50%;
+  display: inline-block;
+  font-size: 0;
+  padding: 0 15rpx 30rpx;
+  box-sizing: border-box;
+}
+.bill view image{
+  height: 357rpx;
+}
+.bill .list{
+  /* height: 515rpx; */
+  box-shadow:0px 0px 5px #efefef;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.bill .list .text{
+  height: 158rpx;
+  background: #fff;
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 100%;
+  text-align: center;
+  padding-top: 40rpx;
+  box-sizing: border-box;
+}
+.bill .list .title{
+  font-size: 32rpx;
+  color: #3f3f3f;
+}
+.bill .list .time{
+  font-size: 22rpx;
+  color: #b3b3b3;
+  position: absolute;
+  display: inline-block;
+  right: 13rpx;
+  bottom: 16rpx;
+}
+.tabon{
+  color: #fff;
+  background: #29282c;
+}

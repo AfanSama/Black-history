@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+<meta charset="utf-8">
+<title>MY会员俱乐部积分商城</title>
+<link type="text/css" href="plugins/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/jQuery.slidizle/css/style.css">
+<link type="text/css" href="css/css.css" rel="stylesheet">
+
+<script src="js/jquery.min.js"></script>
+<script src="plugins/jQuery.slidizle/js/jquery.slidizle.js"></script>
+</head>
+
+<body>
+<div class="view">
+	<div class="top-fixed">
+        <header>
+            <div class="header-wrap clearfix">
+                <span class="logo"><a href="javascript:void(0)" alt="MY会员俱乐部"><img src="img/my.png" alt="MY会员俱乐部"></a></span>
+                <div class="search-placeholder"><span><i class="icon-search"></i>寻找宝贝</span></div>
+                <span class="marker"><a href="javascript:void(0)" alt="MY会员俱乐部"><i class="icon-map-marker"></i>深圳</a></span>
+            </div>
+        </header>
+    </div>
+    
+    <section class="warpper">
+        <div class="dowebok slider--animated" data-slidizle>
+            <ul data-slidizle-content>
+                <li onClick="window.location.href='http://www.baidu.com'" style="background-image: url('img/1.jpg')"></li>
+                <li style="background-image: url('img/2.jpg')"></li>
+                <li style="background-image: url('img/3.jpg')"></li>
+            </ul>
+            <ul data-slidizle-navigation></ul>
+        </div>
+        
+        <div class="tentrance clearfix">
+        	<ul>
+            	<li><a href="javascript:void(0)"><img src="img/zb.png"></a><span style="color:red">丽娜</span></li>
+            	<li><a href="javascript:void(0)"><img src="img/yl.png"></a><span style="color:blue">丽娜</span></li>
+            	<li><a href="javascript:void(0)"><img src="img/ww.png"></a><span>丽娜</span></li>
+            	<li><a href="javascript:void(0)"><img src="img/typeall.png"></a><span>丽娜</span></li>
+            </ul>
+        </div>
+        
+        
+        <div class="convert-item">
+        	<div class="item-title">
+            	<h2>热门兑换</h2><a href="">更多<i class="icon-double-angle-right"></i></a>
+            </div>
+            <ul class="single_item clearfix">
+            	<li>
+                	<a href="">
+                	<span class="single_item_title">沉香手串1.8</span>
+                    <span class="single_item_text">禅心阁天然沉香</span>
+                    <span class="single_item_img"><img src="img/TB2nipFhXXXXXXkXpXXXXXXXXXX_!!28210733-0-saturn_solar.jpg_210x210.jpg"></em>
+                    <span class="single_item_convert"><img src="img/552cd7bc46cf6_32.png">12000</span>
+                    </a>
+                </li>
+            	<li>
+                	<a href="">
+                	<span class="single_item_title">沉香手串1.8</span>
+                    <span class="single_item_text">禅心阁天然沉香</span>
+                    <span class="single_item_img"><img src="img/TB2nipFhXXXXXXkXpXXXXXXXXXX_!!28210733-0-saturn_solar.jpg_210x210.jpg"></em>
+                    <span class="single_item_convert"><img src="img/552cd7bc46cf6_32.png">12000</span>
+                    </a>
+                </li>
+            	<li>
+                	<a href="">
+                	<span class="single_item_title">沉香手串1.8</span>
+                    <span class="single_item_text">禅心阁天然沉香</span>
+                    <span class="single_item_img"><img src="img/TB2nipFhXXXXXXkXpXXXXXXXXXX_!!28210733-0-saturn_solar.jpg_210x210.jpg"></em>
+                    <span class="single_item_convert"><img src="img/552cd7bc46cf6_32.png">12000</span>
+                    </a>
+                </li>
+            	<li>
+                	<a href="">
+                	<span class="single_item_title text_overflow">沉香手串1.8</span>
+                    <span class="single_item_text text_overflow">禅心阁天然沉香</span>
+                    <span class="single_item_img"><img src="img/TB2nipFhXXXXXXkXpXXXXXXXXXX_!!28210733-0-saturn_solar.jpg_210x210.jpg"></em>
+                    <span class="single_item_convert"><img src="img/552cd7bc46cf6_32.png">12000</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+    </section>
+    
+    <footer >
+    	<ul class="clearfix" >
+        	<li><img src="img/home.png"></li>
+        	<li><img src="img/store.png"></li>
+        	<li><img src="img/product.png"></li>
+        	<li><img src="img/user.png"></li>
+        </ul>
+    </footer>
+    
+    
+</div>
+<img style="width:100%; box-sizing:border-box; padding:0 15px;" src="img/未标题-23-01.jpg">
+</body>
+</html>
+
+
+<script>
+console.log($("footer").offset().top)
+
+$('.dowebok').slidizle({
+	loop: true,
+	autoPlay: true,
+	timeout: 3000	
+});
+	
+      $(function(){
+        $(window).scroll(function(){
+          var top =$(window).scrollTop();
+			console.log(top)
+          $(".top-fixed").css("transform","translate3d(0px,"+top+"px)");
+       /* 实时获取滚动条的高度，然后不断的变换absolute的top值，从而达到与fixed同等的效果 */
+        });
+      });
+</script>

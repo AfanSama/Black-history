@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+
+<meta charset="utf-8">
+<title>厅堂点餐</title>
+<link type="text/css" href="plugins/Font-Awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+<link type="text/css" href="css/public.css" rel="stylesheet">
+
+<script src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div class="view">
+	<header class="header">
+    	<h1 class="title">
+    	<a href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
+        台况
+        <a class="calendar" href="calendar.html"><i class="fa fa-calendar"></i></a>
+        </h1>
+    </header>
+    
+    <section class="content dining">
+    	<div class="content-bg">
+        
+        </div>
+        
+    	<div class="dining-tab">
+        	<span class="check">大厅</span>
+        	<span>包房</span>
+        	<span>VIP</span>
+        </div>
+        
+        <div class="dining-list">
+        	<ul>
+            	<li class="check">
+                	<span>
+                    <em class="icon fa fa-home"></em>
+                    <b>在用</b>
+                	<i>4人</i>
+                    </span>
+                    <p>大厅001</p>
+                </li>
+            	<li>
+                	<span>
+                    <em class="icon fa fa-home"></em>
+                    <b>空闲</b>
+                	<i>4人</i>
+                    </span>
+                    <p>大厅002</p>
+                </li>
+            	<li>
+                	<span>
+                    <em class="icon fa fa-home"></em>
+                    <b>空闲</b>
+                	<i>4人</i>
+                    </span>
+                    <p>大厅003</p>
+                </li>
+            	<li>
+                	<span>
+                    <em class="icon fa fa-home"></em>
+                    <b>空闲</b>
+                	<i>4人</i>
+                    </span>
+                    <p>大厅004</p>
+                </li>
+            </ul>
+            <ul class="parlor">
+            	<li class="check">
+                	<span>
+                    <em class="icon fa fa-home"></em>
+                    <b>在用</b>
+                	<i>10人</i>
+                    </span>
+                    <p>包房001</p>
+                </li>
+            	<li>
+                	<span>
+                    <em class="icon fa fa-home"></em>
+                    <b>空闲</b>
+                	<i>10人</i>
+                    </span>
+                    <p>包房002</p>
+                </li>
+            	<li>
+                	<span>
+                    <em class="icon fa fa-home"></em>
+                    <b>空闲</b>
+                	<i>10人</i>
+                    </span>
+                    <p>包房003</p>
+                </li>
+            	<li>
+                	<span>
+                    <em class="icon fa fa-home"></em>
+                    <b>空闲</b>
+                	<i>10人</i>
+                    </span>
+                    <p>包房004</p>
+                </li>
+            </ul>
+            
+            <ul>
+            	<li class="check">
+                	<span>
+                    <em class="icon fa fa-home"></em>
+                    <b>在用</b>
+                	<i>4人</i>
+                    </span>
+                    <p>大厅001</p>
+                </li>
+                <li>
+                <a href="http://weixin.mymall100.com/myMobile/apk/my_app.apk">联系客服</a>
+        		</li>
+            </ul>
+            
+        </div>
+    </section>
+    
+    
+    <section class="dining-popup">
+    	<div class="spec">
+        	<div class="head">
+            <h2>大厅002</h2>
+            <span>建议人数 1-4人</span>
+            <a class="off" href="#"><i class="fa fa-remove fa-2x"></i></a>
+            </div>
+            <div class="mian">
+            	<p>
+                <span>请选择人数</span>
+                </p>
+                <div class="quantity clearfix">
+                    <div class="cuts">-</div>
+                    <input class="sellstock" type="number" value="1">
+                    <div class="plus">+</div>
+                </div>
+                <p>
+                <span>请选择预约到店时间</span>
+                </p>
+                <div class="time">
+                	<i class="fa fa-clock-o"></i>
+                    <input class="newdate" type="datetime-local">
+                    <span>默认预约时间提前一小时</span>
+                </div>
+            </div>
+            
+            <div class="foot">
+            	<a href="menus.html">预订并点餐</a><a>到店点餐</a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <div class="shade"></div>
+</body>
+</html>
+
+
+<script>
+	var diningtab=$('.dining-tab span');
+	var dininglist=$('.dining-list ul')
+	diningtab.on('click',function(){
+		diningtab.removeClass('check');
+		$(this).addClass('check');
+		dininglist.hide();
+		dininglist.eq($(this).index()).show();
+	});
+	var i =0;
+	dininglist.find('li span').on('click',function(){
+		$('.content').addClass('actived');
+		$('.dining-popup').addClass('actived');
+		$('.shade').show();
+	});	
+	
+	$('.shade,.off').on('click',function(){
+		$('.shade').hide();
+		$('.content').removeClass('actived');
+		$('.dining-popup').removeClass('actived');
+	});
+	
+	Date.prototype.Format = function(fmt)     
+		{ //author: meizz  
+		  var o = {     
+			"M+" : this.getMonth()+1,                 //月份  
+			"d+" : this.getDate(),                    //日  
+			"h+" : this.getHours()+1,                   //小时  
+			"m+" : this.getMinutes(),                 //分  
+			"s+" : this.getSeconds(),                 //秒  
+			"q+" : Math.floor((this.getMonth()+3)/3), //季度  
+			"S"  : this.getMilliseconds()             //毫秒  
+		  };     
+		  if(/(y+)/.test(fmt))     
+			fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));     
+		  for(var k in o)     
+			if(new RegExp("("+ k +")").test(fmt))     
+		  fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));     
+		  return fmt;     
+		};  
+	
+      $(function(){
+		  
+		  var date=new Date().Format("yyyy-MM-ddThh:mm"); 
+		  console.log(date);
+		  $(".newdate").val(date).attr({"min":date});
+		  
+		  
+        $(window).scroll(function(){
+          var top =$(window).scrollTop();
+          $(".top-fixed").css("transform","translate3d(0px,"+top+"px)");
+       /* 实时获取滚动条的高度，然后不断的变换absolute的top值，从而达到与fixed同等的效果 */
+        });
+      });
+</script>

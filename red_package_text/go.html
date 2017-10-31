@@ -24,7 +24,7 @@ $(function(){
 	if(keys){
 		$.getJSON("https://api.fentuapp.com.cn/Redpacket/yiMu",{"key":keys},function (data) {
 			if(data.errcode==0){
-				window.location.href=data.data.url;
+				window.location.href=data.data.redpacket_url;
 			}
 		});
 	}else{

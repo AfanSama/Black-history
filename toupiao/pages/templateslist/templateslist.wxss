@@ -1,0 +1,59 @@
+/* pages/templateslist/templateslist.wxss */
+.votinginfo{
+  display: inline-block;
+  width: 305rpx;
+  margin-bottom: 41rpx;
+}
+.votinginfo .ranking{
+  margin-bottom: 15rpx;
+}
+.votinginfo .ranking text{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color:#999999;
+  vertical-align: middle;
+}
+.votinginfo .ranking image{
+  width: 40rpx;
+  vertical-align: middle;
+  margin-left: 18rpx;
+}
+.votinginfo .img{
+  height: 371rpx;
+  position: relative;
+}
+.votinginfo .img image{
+  width: 305rpx;
+  height: 371rpx;
+}
+.votinginfo .img text{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 32rpx;
+  text-align: center;
+  background: rgba(37, 37, 37, .5);
+  color: #fff;
+}
+.votinginfo .votes{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #b2b2b2;
+  margin: 15rpx 0 22rpx;
+}
+.votinginfo .votes text{
+  float: right;
+}
+.votinginfo button{
+  color: #fff;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #f35757;
+  border-radius: 0;
+}
+.votinginfo button::after{
+  display: none;
+}

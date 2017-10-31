@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/createvote/createvote",
+    "pages/welcome/welcome",
+    "pages/type/type",
+    "pages/logs/logs",
+    "pages/voting/voting",
+    "pages/templateslist/templateslist",
+    "pages/billinfo/billinfo",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/cutInside/cutInside"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#3cc51f",
+    "backgroundColor": "#29282c",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "广场",
+        "iconPath": "img/2.png",
+        "selectedIconPath": "img/1.png"
+      },
+      {
+        "pagePath": "pages/type/type",
+        "text": "制作",
+        "iconPath": "img/4.png",
+        "selectedIconPath": "img/3.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "img/6.png",
+        "selectedIconPath": "img/5.png"
+      }
+    ]
+  }
+}

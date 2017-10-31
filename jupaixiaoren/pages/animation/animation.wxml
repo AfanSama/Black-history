@@ -1,0 +1,12 @@
+<view class="container">
+<view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
+  <view  style="margin-top:200px;" bindtap="rotateAndScale">
+    <text>rotateAndScale</text>
+  </view>
+  <view  bindtap="rotateThenScale">
+    <text>rotateThenScale</text>
+  </view>
+  <view  bindtap="rotateAndScaleThenTranslate">
+    <text>rotateAndScaleThenTranslate</text>
+  </view>
+</view>

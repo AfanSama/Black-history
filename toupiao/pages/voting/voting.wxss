@@ -1,0 +1,124 @@
+/* pages/voting/voting.wxss */
+page{
+  height: 100%;
+}
+.box{
+  font-size: 0;
+}
+.search{
+  width: 100%;
+  height: 110rpx;
+  background:#29282c;
+  padding:16rpx 54rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #cccccc;
+  position:fixed;
+  top: 0;
+  opacity: 0;
+  transition:opacity .2s linear;
+  z-index: 10;
+}
+.search.show{
+		opacity: 1
+}
+.search input{
+  display: inline-block;
+  width: 478rpx;
+  height: 78rpx;
+  background: #fff;
+  padding-left: 26rpx;
+  box-sizing: border-box;
+}
+.search text{
+  display: inline-block;
+  height: 78rpx;
+  width: 146rpx;
+  background: #171717;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 78rpx;
+  vertical-align: top;
+  margin-left: 18rpx;
+}
+.cover image{
+  width: 100%;
+}
+.details{
+  height:73rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #fff;
+  background: #f35757;
+  line-height: 73rpx;
+}
+.details text{
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+.menu{
+  position:fixed;
+  bottom: 0;
+  height: 98rpx;
+  width: 100%;
+  background: #29282c;
+}
+.menu text{
+  display: inline-block;
+  width: 50%;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 98rpx;
+  border-left: 2rpx solid #fff;
+  box-sizing: border-box;
+}
+.menu text:first-child{
+  border:0;
+}
+.content{
+  padding: 0 52rpx 125rpx;
+}
+.content .title{
+  font-size: 46rpx;
+  color: #333;
+  display:inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 36rpx 0 40rpx;
+}
+.content .subhead{
+  color: #333;
+  font-size: 36rpx;
+  line-height: 36rpx;
+  display:inline-block;
+  padding-bottom: 40rpx;
+  width: 100%;
+}
+.content .textinfo{
+  font-size: 32rpx;
+  color: #999999;
+  line-height: 48rpx;
+  display: inline-block;
+  padding-bottom:45rpx;
+  text-indent:2em;
+}
+.content .award{
+  font-size: 32rpx;
+  text-indent:0;
+  border-bottom: 1px solid #cccccc;
+  padding:0 0 95rpx;
+}
+.content .hot{
+  margin-top: 88rpx;
+}
+.content .more{
+  font-size: 32rpx;
+  text-align: right;
+  color: #999999;
+}
+.content .agreement{
+  font-size: 28rpx;
+}

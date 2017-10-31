@@ -1,0 +1,6 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='img'>
+<image src='/img/shade.png' mode="widthFix"></image>
+<image class='logo' src='/img/logo.png' mode='widthFix'></image>
+</view>
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登陆 </button>

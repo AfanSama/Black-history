@@ -1,0 +1,53 @@
+<!--pages/createvote/createvote.wxml-->
+<view class='content'>
+  <text class='hint'>带<text>“*”</text>为必填项目，其他为选填。</text>
+  <view class="model {{show1?'out':''}}">
+    <text>活动名称</text>
+    <input placeholder="请输入活动名称" focus='{{show1}}' bindinput="bindName"/>
+  </view>
+  <view class="model  {{show2?'out':''}}">
+    <text>联系方式</text>
+    <input placeholder="请输入联系方式" focus='{{show2}}' bindinput="bindContact"/>
+  </view>
+  <view class='model {{showdateend}}'>
+    <text>报名截止</text>
+    <picker mode="date" value="{{date}}"  bindchange="bindDateEnd">
+      <view class="picker">
+        {{dateend}}
+      </view>
+    </picker>
+  </view>
+  <view class='model {{showdateover}}'>
+    <text>活动结束</text>
+    <picker mode="date" value="{{date}}" start="{{dateend}}"  bindchange="bindDateOver">
+      <view class="picker">
+        {{dateover}}
+      </view>
+    </picker>
+  </view> 
+  <view class="model {{show3?'out':''}}" bindtap='describe' animation="{{describeHight}}">
+    <text>活动描述</text>
+    <textarea  bindinput="bindDescribe"  focus='{{show3}}'/>
+  </view>
+  <view class="model {{show4?'out':''}}" bindtap='awards' animation="{{awardsHight}}">
+    <text>奖项设置</text>
+    <textarea  bindinput="bindAwards"  focus='{{show4}}'/>
+  </view>
+  <view class='fee'>
+    <text>报名费设置</text>
+  </view>
+  <view class="model upcover {{cover?'out':''}}" bindtap='goCutInside'>
+    <text>封面图片</text>
+    <image src="{{cover?cover:'/img/add.png'}}" style="width:{{cover?'280rpx':''}}" mode='widthFix'></image>
+  </view>
+  <view class="model upimages" bindtap='upImages'>
+    <text>展示图片（最多7张）</text>
+    <view>
+      <image src="/img/add.png" mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='sub'>
+    <button>上传活动</button>
+    <button>保存为草稿</button>
+  </view>
+</view>

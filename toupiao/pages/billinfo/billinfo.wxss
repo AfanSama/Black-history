@@ -1,0 +1,80 @@
+/* pages/billinfo/billinfo.wxss */
+page{
+  height: 100%;
+}
+.box{
+  font-size: 0;
+}
+.cover image{
+  width: 100%;
+}
+.details{
+  height:106rpx;
+  width: 100%;
+  font-size: 46rpx;
+  color: #4c4c4c;
+  border-bottom:2rpx solid #e1e1e1;
+}
+.details .ranking{
+  vertical-align: middle;
+  line-height: 109rpx;
+}
+.details image{
+  vertical-align: middle;
+  width: 37rpx;
+  margin-left: 26rpx;
+}
+.details .poll{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #b2b2b2;
+  vertical-align: sub;
+  display: inline-block;
+  width: 235rpx;
+  text-align: right;
+}
+.menu{
+  position:fixed;
+  bottom: 0;
+  height: 98rpx;
+  width: 100%;
+  background: #29282c;
+}
+.menu text{
+  display: inline-block;
+  width: 33.33%;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 98rpx;
+  border-left: 2rpx solid #fff;
+  box-sizing: border-box;
+}
+.menu text:first-child{
+  border:0;
+}
+.content{
+  padding: 0 52rpx;
+}
+.content .title{
+  font-size: 46rpx;
+  color: #333;
+  display:inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 36rpx 0 40rpx;
+}
+.content .subhead{
+  color: #333;
+  font-size: 36rpx;
+  display:inline-block;
+  padding-bottom: 40rpx;
+}
+.content .textinfo{
+  font-size: 32rpx;
+  color: #999999;
+  line-height: 48rpx;
+  padding-bottom:125rpx;
+  display: inline-block;
+  text-indent:2em;
+}

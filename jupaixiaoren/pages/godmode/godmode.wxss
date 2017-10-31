@@ -1,0 +1,66 @@
+/* pages/godmode/godmode.wxss */
+.container{
+  background: url(http://image.fentuapp.com.cn/jupai/bg_2.png) no-repeat;
+  background-size:contain;
+  display: block;
+}
+canvas{
+  margin: 0 auto;
+}
+.container .hide{
+  display: none;
+}
+.box{
+  padding-top: 25rpx;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+.box image{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container button{
+  margin-top: 50rpx;
+  width: 608rpx;
+  height: 106rpx;
+  background: url(http://image.fentuapp.com.cn/jupai/next_1.png) no-repeat;
+  background-size:cover;
+}
+.container button::after{
+  display: none;
+}
+.page-section-spacing scroll-view{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 193rpx;
+  box-sizing: border-box;
+  padding-top: 15rpx;
+  white-space: nowrap;
+}
+.page-section-spacing image{
+  width: 120rpx;
+}
+.spacing{
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.page-section-spacing .line{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rpx;
+  height: 168rpx;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}

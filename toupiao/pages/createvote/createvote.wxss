@@ -1,0 +1,130 @@
+/* pages/createvote/createvote.wxss */
+page{
+  background-color: rgba(247, 247, 247, 1);
+}
+.content{
+  padding:0 30rpx 106rpx;
+  font-size: 0;	
+}
+.content .hint{
+  display: block;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  padding: 29rpx 35rpx;
+}
+.content .hint text{
+  color: #f34646;
+}
+.model,.fee{
+  background:#fff;
+	border-radius: 2px;
+  height: 100rpx;
+  margin-bottom: 34rpx;
+  position: relative;
+}
+.model text,.fee text{
+  font-size: 36rpx;
+  line-height: 36rpx;
+	color: #666666;
+  display: block;
+  padding-left: 23rpx;
+  padding-top: 33rpx;
+  box-sizing: border-box;
+  transition:all .5s ease;
+}
+.model::after{
+  content: "*";
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #f37b46;
+  position: absolute;
+  left: 168rpx;
+  top: 17rpx;
+  transition:all .5s ease;
+}
+.model input,.model textarea,.model .picker{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100rpx;
+  padding:47.5rpx 15rpx 0;
+  font-size: 30rpx;
+  color: #383838;
+  opacity: 0;
+}
+.model textarea{
+  height: 0;
+  padding: 0;
+}
+.out text{
+  font-size: 22rpx;
+  color: #cccccc;
+  padding-left: 16rpx;
+  padding-top: 12rpx;
+}
+.out input,.out textarea{
+  opacity: 1;
+}
+.out textarea{
+  padding:47.5rpx 15rpx 0;
+  height: 400rpx;
+}
+.out::after,.upimages::after{
+  display: none;
+}
+.out .picker{
+  opacity: 1;
+}
+ .model:hover::after{
+  opacity: 0;
+  transition:all .5s ease;
+}
+.model:hover text{
+  font-size: 22rpx;
+  color: #cccccc;
+  padding-left: 16rpx;
+  padding-top: 12rpx;
+  transition:all .5s ease;
+}
+.model:hover input,.model:hover .picker{
+  opacity: 1;
+  transition:all .5s ease;
+} 
+.upcover{
+  height: 250rpx;
+}
+.upcover image{
+  width: 126rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.upimages{
+  height: auto; 
+  min-height: 200rpx;
+}
+.upimages view{
+  padding: 0 15rpx 28rpx;
+  box-sizing: border-box;
+}
+.upimages image{
+  width: 105rpx;
+  display: inline-block;
+  margin-top: 20rpx;
+  margin-right: 43rpx;
+}
+.sub{
+  font-size: 0;
+  margin: 0 -13rpx;
+}
+.sub button{
+  display: inline-block;
+  width: 334rpx;
+  padding: 0;
+  margin: 0 13rpx;
+  background-color: rgba(41, 40, 44, 1);
+  font-size: 36rpx;
+	color: #fff;
+}

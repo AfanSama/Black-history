@@ -1,0 +1,12 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <button bindtap='up'>上传</button>
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>
+ 
+  <textarea style='border:1px solid #333' bindblur="confirm"></textarea>
+
+  <text>{{text}}</text>
+  

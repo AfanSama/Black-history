@@ -1,0 +1,235 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	font-family:"sans-serif";
+}
+body,html{
+	padding:0;
+	margin:0;
+	position:relative;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0;border:0;}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="text"],
+button,input,select{
+-webkit-appearance: none;
+border-radius:0;	
+}
+body,.hader,.footer,.content{
+width:100%;	
+}
+body { background:#f1f1f1; color:#666; font-size:0.75rem; font-family: Microsoft YaHei,"微软雅黑"; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#666; text-decoration:none; }
+a:hover { text-decoration:none; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;} 
+/* css common */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+input:focus{
+ outline:none;
+}
+input,button,select,textarea{outline:none;} 
+
+.text_overflow{
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+.hidden{
+	display:none;	
+}
+
+.view{
+	background-color:#eee;
+	height:100%;
+}
+
+.top-fixed{position:fixed;top:0;z-index:12;width:100%;}
+
+.logo{
+	display:block;
+	width:60px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.logo img{
+	width:100%;
+	height:auto;
+	vertical-align:middle;
+}
+.marker{
+	position:absolute;
+	right:5px;
+	top:0;
+	line-height:40px;	
+}
+.marker a{
+	color:#fff;
+	font-size:16px;
+}
+.marker i{
+	margin-right:5px;	
+}
+.header-wrap{
+	width:100%;
+	height:40px;
+	padding:7px 60px;
+	box-sizing:border-box;
+	position:relative;
+	background-color: rgba(50,50,50,1);
+}
+.search-placeholder{
+	background:#fff;
+	text-align:center;
+	border-radius: 3px;
+	width:100%;
+	height:26px;
+	vertical-align:middle;
+	line-height:26px;
+	font-size:14px;
+	color:#333;
+}
+.search-placeholder i{
+	font-size:16px;
+	margin-right:5px;
+}
+.warpper{
+	padding-top:40px;
+	padding-bottom:45px;
+	max-width:540px;
+	margin:0 auto;
+}
+.dowebok{
+	height:45vw;
+	max-height:169px;
+}
+.slidizle-navigation{
+	bottom:5%;
+}
+.tentrance{
+	padding:0 10px 15px;
+	background:#fff;	
+}
+.tentrance li{
+	float:left;
+	width:25%;
+	box-sizing:border-box;
+	padding:20px 5%;
+	position:relative;
+}
+.tentrance li a img{
+	width:100%;
+	height:auto;	
+}
+.tentrance li span{
+	font-size:14px;
+	position:absolute;
+	display:block;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+
+.convert-item{
+	margin-top:10px;
+	background:#fff;
+	position:relative;
+}
+
+.convert-item .item-title h2{
+	font-size:16px;
+}
+.convert-item .item-title h2:before{
+	content:"";
+	position:absolute;
+	top:0;
+	height:31px;
+	width:5px;
+	left:0;
+	background:rgb(255, 155, 67);
+}
+.convert-item .item-title a{
+	font-size:14px;
+	position:absolute;
+	right:10px;
+	top:7px;
+}
+.convert-item .item-title{
+	padding:5px 10px;
+	border-bottom:1px solid rgb(232, 232, 232);	
+}
+.convert-item .single_item{
+	background:#fff;
+	position:relative;
+}
+.convert-item .single_item:before{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	width:1px;
+	border-left:1px solid #fff;
+}
+.convert-item .single_item li{
+	float:left;
+	width:50%;
+	box-sizing:border-box;
+	border-left:1px solid  rgb(232, 232, 232);
+	border-bottom:1px solid  rgb(232, 232, 232);
+	padding:10px;
+}
+.single_item .single_item_img {
+	margin-top:5px;
+}
+.single_item .single_item_img img{
+	width:100%;	
+}
+.single_item li span{
+	display:block;
+	width:100%;
+}
+.single_item li .single_item_title{
+	font-size:16px;
+	color:#333;
+}
+.single_item li .single_item_text{
+	color:#666;
+	margin-top:5px;
+}
+.single_item li .single_item_convert{
+	margin-top:10px;
+	font-size:14px;
+	color:#FEB951;
+}
+.single_item li .single_item_convert img{
+	width:18px;
+	margin-right:2px;
+	vertical-align: sub;
+}
+
+footer{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	background:#fff;
+	border-top: 1px solid #E7E7E7;
+}
+footer li{
+	float:left;
+	width:25%;
+	text-align:center;
+	box-sizing:border-box;
+	padding:5px;
+}
+

@@ -1,0 +1,33 @@
+<!--pages/home/home.wxml-->
+<view class='box'>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="bannerChange">
+  <block wx:for="{{imgUrls}}" wx:key="banner">
+    <swiper-item  bindtap='onClick' >
+      <view class='banner' style='box-shadow:{{boxcss}}'>
+        <image src="{{item}}" class="slide-image"  mode='widthFix' />
+        <view>“分图红包投票”</view>
+      </view>
+    </swiper-item>
+  </block>
+  <view class='bannertab'>
+  <block wx:for="{{imgUrls}}" wx:key="bannertab">
+      <view class="{{currentTab==index?'on':''}}"></view>
+  </block>
+  </view>
+</swiper>  
+<scroll-view scroll-x="true" class='tab'>
+    <view wx:for="{{tabList}}" wx:key="tab" data-index="{{index}}" class="{{index==tabindex?'tabon':''}}" bindtap='tabClick'>{{item}}</view>
+</scroll-view>
+<view class='bill'>
+  <view class='listbox' bindtap='billClick' wx:for="{{billList}}" wx:key="bill">
+      <view class='list'>
+            <image src='{{item}}' mode='widthFix'></image>
+            <view class='text'>
+              <text class='title'>“评选最美海报”</text>
+              <text class='time'>2017-09-15截止</text>
+            </view>
+      </view>
+  </view>
+</view>
+</view>

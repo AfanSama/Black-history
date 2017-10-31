@@ -253,11 +253,13 @@ a {
 	max-width: 414px;
 	margin: 0 auto;
 	position:absolute;
+	padding-bottom: 50px;
 }
 
 .orpk-view header {
 	position: relative;
-	background: #f5f5f5
+	background: #f5f5f5;
+	font-size:0;
 }
 
 .orpk-view header .btn {
@@ -433,14 +435,15 @@ a {
 
 .share-hint{
 	position: fixed;
-	max-width: 40px;
+	max-width: 100px;
+    width: 12.5%;
 	bottom: 10%;
 	right:-20px;
 	opacity:.5;
 	webkit-animation: share-hint 1s  forwards;
 	animation: share-hint 1s  forwards;
 	z-index: 11;
-	background:url(../img/sharebg.png) no-repeat;
+	background:url(../img/sharebg.png) center no-repeat;
 	background-size:contain;
 }
 .share-hint img{
@@ -480,7 +483,7 @@ a {
 	}
 
 	50% {
-		transform: scale(1.2)
+		transform: scale(1.1)
 	}
 
 	to {
@@ -699,14 +702,62 @@ a {
 	position:absolute;
 	bottom:0;
 	left:0;
+	display:none;
 }
 .music{
-	position:absolute;
+	position:fixed;
 	top:1%;
 	right:2.5%;
 	width:10%;
 	z-index:15;
 }
-.music img{
+.music img,.rqcode img,.phone img{
 	width:100%;	
+}
+.rqcode{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 50%;
+    font-size: 0;
+}
+.phone{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+    font-size: 0;
+}
+#rqCode{
+	position: absolute;;
+	left: 50%;
+	top: 50%;
+	width: 50%;
+	background: #fff;
+	text-align: center;;
+	border-radius: 6px;
+	z-index:19901024;
+	transform: translate(-50%,-50%);
+	padding: .5466666666666rem .58666666666rem;
+	box-sizing: border-box;
+	font-size: 0;
+}
+#rqCode img{
+	width: 100%;
+}
+#rqCode p{
+	font-size: .48rem;
+	line-height: .48rem;
+	margin-top: .5066666666rem;
+	color: #000000;
+}
+
+#rqCode span{
+    position: absolute;
+    bottom: -25%;
+    width: 100%;
+    left: 0;
+}
+#rqCode span img{
+    width:20%;
 }

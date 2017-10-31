@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <script src="build/flexible_css.debug.js"></script>
+    <script src="build/flexible.debug.js"></script>
+    <script src="plugins/jquery-3.2.1.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script>
+	document.write("<link href='css/css.css?"+Math.random()+"' type='text/css' rel='stylesheet'>");
+	document.write("<script src='js/js.js?"+Math.random()+"'><"+'/'+"script>");
+	</script>
+    <title>口令红包</title>
+</head>
+<body>
+	<section class="mian">
+    	<section class="portrait">
+        	<img src="img/portrait.png">
+            <p>清晰</p>
+        </section>
+        <p class="hint">输入口令，抢夺现金红包</p>
+        <p class="enter"><input type="text" placeholder="输入您找到的口令，领取现金红包"></p>
+        <p class="sub"><button onclick="openBag()">确认</button></p>
+        <p class="help">还不知道口令？赶紧点击下方获取口令吧</p>
+        <p class="get-portrait"><button onclick="getPortrait()">点击获取口令</button></p>
+    </section>
+    
+    <section class="open">
+    	<section class="portrait">
+        	<div class="head">
+            	<img src="img/portrait.png">
+            	<p>清晰</p>
+            </div>
+            <div class="btn">
+                <button class="wxcode">微信</button>
+                <button class="mobile">联系电话</button>
+            </div>
+        </section>
+        <p class="get-money">已领取<span>36</span>元</p>
+        <p class="check">
+            <span><button onclick="getPortrait()">查看口令</button></span>
+            <span><button onclick="withdraw()">立即提现</button></span>
+        </p>
+        <ul class="list">
+<!--             	<li>
+                    <img src="../word/img/portrait.png">
+                    <span class='name'>大师兄</span>
+                    <span class='time'>2017.10.08</span>
+                    <span class='money'>0.25元</span>
+                </li> -->
+        </ul>
+    </section>
+    
+</body>
+</html>
+
+
+<script>
+//改写alert
+window.confirm = function(txt,callBack)
+{
+    var shield = document.createElement("DIV");
+    shield.id = "shield";
+    shield.style.position = "absolute";
+    shield.style.left = "0px";
+    shield.style.top = "0px";
+    shield.style.width = "100%";
+    shield.style.height = "100%";
+    shield.style.background = "#333";
+    shield.style.textAlign = "center";
+    shield.style.zIndex = "19901000";
+    shield.style.filter = "alpha(opacity=.5)";
+    shield.style.opacity = ".5";
+    var alertFram = document.createElement("DIV");
+    alertFram.id="alertFram";
+    alertFram.style.position = "absolute";
+    alertFram.style.left = "50%";
+    alertFram.style.top = "50%";
+    alertFram.style.width = "7.8266666666rem";
+    alertFram.style.height = "4.133333333rem";
+    alertFram.style.background = "#fff";
+    alertFram.style.overflow = "hidden";
+    alertFram.style.textAlign = "center";
+    alertFram.style.borderRadius = ".08rem";
+    alertFram.style.zIndex = "19901024";
+    alertFram.style.transform="translate(-50%,-50%)";
+    strHtml = "<img src='img/error.png'>";
+    strHtml += " <p>"+txt+"</p>";
+    strHtml += " <p class='btn'><span onclick=\"call()\" style='color: #dcdcdc;'>取 消</span><span onclick=\"doOk()\" style=\"color: #ff6c68;\">确 定</span></p>";
+    alertFram.innerHTML = strHtml;
+    document.body.appendChild(alertFram);
+    document.body.appendChild(shield);
+    var c = 0;
+    this.doAlpha = function(){
+        if (c++ > 20){clearInterval(ad);return 0;}
+        shield.style.filter = "alpha(opacity="+c+")";
+        shield.style.opacity = ".5";
+    }
+    var ad = setInterval("doAlpha()",5);
+    this.call = function(){
+        //alertFram.style.display = "none";
+        //shield.style.display = "none";
+　　　　document.body.removeChild(alertFram);
+        document.body.removeChild(shield);
+    }
+    this.doOk = function(){
+        //alertFram.style.display = "none";
+        //shield.style.display = "none";
+        callBack();
+　　　　 document.body.removeChild(alertFram);
+        document.body.removeChild(shield);
+    }
+    alertFram.focus();
+    document.body.onselectstart = function(){return false;};
+}
+</script>

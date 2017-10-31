@@ -1,0 +1,14 @@
+/* pages/type/type.wxss */
+.typelist{
+  padding: 0 20rpx;
+  font-size: 0;
+}
+.typelist view{
+  padding: 40rpx 20rpx 0;
+  width: 315rpx;
+  display: inline-block;
+}
+.typelist view image{
+  width: 315rpx;
+  box-shadow:0px 0px 10px rgba(17,17,17, .1);
+}

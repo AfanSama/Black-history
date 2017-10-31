@@ -1,0 +1,6 @@
+<!--pages/type/type.wxml-->
+<view class='typelist'>
+  <view wx:for="{{typelist}}" wx:key="types">
+      <image data-id='{{item.id}}' bindtap='elect' src='/img/iconmeng.png' mode='widthFix'></image>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<!--pages/templateslist/templateslist.wxml-->
+<template name="votinglist">
+  <view class='votinginfo' style="{{index%2==0?'':'margin-left:31rpx'}}" >
+    <view class='ranking'><text>{{ranking}}</text>
+    <image wx:if="{{index<3}}" src="/img/jb{{index}}.png" mode='widthFix'></image>
+    </view>
+    <view class='img' data-id="{{num}}" bindtap='goBill'>
+      <image src='/img/fm.png'></image>
+      <text>{{num}}号</text>
+    </view>
+    <view class='votes'>已获得:<text>{{index}}票</text></view>
+    <button bindtap='addVote'>投票</button>
+  </view>
+</template>

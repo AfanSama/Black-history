@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <script src="build/flexible_css.debug.js"></script>
+    <script src="build/flexible.debug.js"></script>
+    <script src="plugins/jquery-3.2.1.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script>
+	document.write("<link href='css/css.css?"+Math.random()+"' type='text/css' rel='stylesheet'>");
+	document.write("<script src='js/js.js?"+Math.random()+"'><"+'/'+"script>");
+	</script>
+    <title>西瓜红包</title>
+</head>
+<body>
+	<section class="mian">
+    	<div class="content">
+        	<img src="img/红包@3x.png">
+            <div class="head">
+                <img src="">
+                <p class="name"></p>
+            	<p class="title text_overflow"></p>
+            </div>
+            <button class="open" onClick="openBag()"></button>
+        </div>
+    </section>
+    <section class="info">
+        <div class="content">
+            <div class="head">
+            	<img src="img/bg.png">
+                <div class="win">
+                <p><font>5.88</font><span>元</span></p>
+                <button onClick="goApp()">零钱已存入西瓜红包，点击提现</button>
+                </div>
+                <img class="out" src="img/表情@3x.png">
+            </div>
+            <h1 class="title">美无缺广告</h1>
+            <div class="ad">
+            	<img src="img/ad@2x.png">
+                <div>
+                <a>查看详情</a>
+                <p>共2000个，剩余50个</p>
+                </div>
+            </div>
+            <ul class="list">
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

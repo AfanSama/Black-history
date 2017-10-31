@@ -1,0 +1,23 @@
+<!--pages/billinfo/billinfo.wxml-->
+<view class='box'>
+  <view class='cover'>
+  <image src='/img/cover.png' mode="widthFix"></image>
+  </view>
+  <view class='content'>
+    <view class='details'>
+      <text class='ranking'>当前排名：第1名</text>
+      <image src='/img/jb0.png' mode="widthFix"></image>
+      <text class='poll'>总票数:300000</text>
+    </view>
+    <text class='title'>“心理罪海报”</text>
+    <text class='subhead'>作品简介</text>
+    <view class='textinfo'>
+      {{text}}
+    </view>
+  </view>
+  <view class='menu'>
+    <text>帮TA分享</text>
+    <text>帮TA投票</text>
+    <text>我要参加</text>
+  </view>
+</view>
